@@ -27,6 +27,16 @@ public class GuestName {
                 System.out.println("Last name cannot be blank. Please enter a valid last name.");
             } else {
                 isValid = true; // Set isValid to true to exit the loop
+                // Check if the last name contains any digits
+                if (lastName.matches(".*\\d.*")) {
+                    System.out.println("Last name cannot contain any digits. Please enter a valid last name.");
+                    isValid = false; // Set isValid to false to re-enter the loop
+                }
+                // Check if the last name contains any special characters
+                if (!lastName.matches("[a-zA-Z ]+")) {
+                    System.out.println("Last name cannot contain any special characters. Please enter a valid last name.");
+                    isValid = false; // Set isValid to false to re-enter the loop
+                }
             }
         }
         return lastName;
