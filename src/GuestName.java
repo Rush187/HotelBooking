@@ -51,9 +51,19 @@ public class GuestName {
             System.out.print("Enter the first name here: ");
             firstName = scanner.nextLine().trim(); // Trim the input to remove leading and trailing whitespace
             if (firstName.isEmpty()) {
-                System.out.println("First name cannot be blank. Please enter a valid first name.");
+                System.out.println("Last name cannot be blank. Please enter a valid first name.");
             } else {
                 isValid = true; // Set isValid to true to exit the loop
+                // Check if the last name contains any digits
+                if (firstName.matches(".*\\d.*")) {
+                    System.out.println("Last name cannot contain any digits. Please enter a valid first name.");
+                    isValid = false; // Set isValid to false to re-enter the loop
+                }
+                // Check if the last name contains any special characters
+                if (!firstName.matches("[a-zA-Z ]+")) {
+                    System.out.println("First name cannot contain any special characters. Please enter a valid last name.");
+                    isValid = false; // Set isValid to false to re-enter the loop
+                }
             }
         }
         return firstName;

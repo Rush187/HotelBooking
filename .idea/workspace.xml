@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cd436f0-2b16-4426-8c66-6fc90a409351" name="Changes" comment="First draft of my hotel booking system project.">
+    <list default="true" id="6cd436f0-2b16-4426-8c66-6fc90a409351" name="Changes" comment="Testing out copilot in this one. Pretty fantastic.">
+      <change afterPath="$PROJECT_DIR$/src/NumberOfGuests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GuestName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GuestName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713748717828</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Testing out copilot in this one. Pretty fantastic.">
+      <option name="closed" value="true" />
+      <created>1713749681921</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713749681921</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,17 +125,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First draft of my hotel booking system project." />
-    <option name="LAST_COMMIT_MESSAGE" value="First draft of my hotel booking system project." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Testing out copilot in this one. Pretty fantastic." />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing out copilot in this one. Pretty fantastic." />
   </component>
 </project>
