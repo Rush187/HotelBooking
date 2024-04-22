@@ -1,0 +1,1 @@
+I am learning to code Java on my own. Back in school when I was learning COBOL we had to make a Hotel Booking system. I did a horrible job at it. This time around I am committed to doing a better job learning this new language. 
