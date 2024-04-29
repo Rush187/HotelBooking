@@ -39,6 +39,7 @@ public class GuestName {
                 }
             }
         }
+        System.out.println(" ");
         return lastName;
     }
 
@@ -66,6 +67,7 @@ public class GuestName {
                 }
             }
         }
+        System.out.println(" ");
         return firstName;
     }
 }

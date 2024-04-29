@@ -32,6 +32,7 @@ public class NumberOfGuests {
                 System.out.println("Invalid input. Please enter a valid number of guests.");
             }
         }
+        System.out.println(" ");
         return numberOfGuests;
     }
 }

@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cd436f0-2b16-4426-8c66-6fc90a409351" name="Changes" comment="Testing out copilot in this one. Pretty fantastic.">
-      <change afterPath="$PROJECT_DIR$/src/NumberOfGuests.java" afterDir="false" />
+    <list default="true" id="6cd436f0-2b16-4426-8c66-6fc90a409351" name="Changes" comment="Added in a module for the number of guests staying.">
+      <change afterPath="$PROJECT_DIR$/src/Calendar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DurationOfStay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GuestName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GuestName.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NumberOfGuests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NumberOfGuests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713749681921</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added in a module for the number of guests staying.">
+      <option name="closed" value="true" />
+      <created>1713786089719</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713786089719</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +136,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First draft of my hotel booking system project." />
     <MESSAGE value="Testing out copilot in this one. Pretty fantastic." />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing out copilot in this one. Pretty fantastic." />
+    <MESSAGE value="Added in a module for the number of guests staying." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added in a module for the number of guests staying." />
   </component>
 </project>
