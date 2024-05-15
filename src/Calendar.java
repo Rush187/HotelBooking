@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Calendar {
     private final Scanner scanner; // Declare scanner as a class variable
 
-    public checkRoomAvailability() {
+    public Calendar() {
         scanner = new Scanner(System.in); // Initialize scanner in the constructor
     }
 

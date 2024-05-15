@@ -12,14 +12,15 @@ public class Main {
 
         // How long is the stay?
         DurationOfStay newDurationOfStay = new DurationOfStay();
-        newDurationOfStay.askForDurationOfStay(); // Call the method to ask for the duration of stay
+        int duration = newDurationOfStay.askForDurationOfStay(); // Call the method to ask for the duration of stay
 
+        // What type of room?
+        RoomType newRoomType = new RoomType();
+        newRoomType.askForRoomType(duration); // Call the method to ask for the room type with duration as argument
 
         // Check room availability.
         Calendar newCalendar = new Calendar();
         newCalendar.checkRoomAvailability(); // Call the method to check room availability
-
-        // What kind of room?
 
         // Check in date?
         // Check out date?
