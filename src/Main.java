@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
         // Run the program here.
@@ -19,11 +21,14 @@ public class Main {
         newRoomType.askForRoomType(duration); // Call the method to ask for the room type with duration as argument
 
         // Check room availability.
-        Calendar newCalendar = new Calendar();
+        Calendar newCalendar = new Calendar(duration);
         newCalendar.checkRoomAvailability(); // Call the method to check room availability
 
         // Check in date?
+        LocalDate checkInDate = newCalendar.getCheckInDate(); // Call the method to get the check-in date
+
         // Check out date?
+        LocalDate checkOutDate = newCalendar.getCheckOutDate(); // Call the method to get the check-out date
 
         // How many rooms?
         // Determine pricing.

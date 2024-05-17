@@ -1,41 +1,55 @@
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
 public class Calendar {
-    private final Scanner scanner; // Declare scanner as a class variable
+    private final Scanner scanner;
+    private LocalDate checkInDate;
+    private int duration;
 
-    public Calendar() {
-        scanner = new Scanner(System.in); // Initialize scanner in the constructor
+    public Calendar(int duration) {
+        scanner = new Scanner(System.in);
+        this.duration = duration;
     }
 
-    // Method to check room availability
+    public LocalDate getCheckInDate() {
+        checkInDate = queryDate("check-in");
+        System.out.println("The check-in date is " + checkInDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + ".");
+        return checkInDate;
+    }
+
+    public LocalDate getCheckOutDate() {
+        LocalDate checkOutDate = checkInDate.plusDays(duration);
+        System.out.println("The check-out date is " + checkOutDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + ".");
+        return checkOutDate;
+    }
+
     public void checkRoomAvailability() {
-        boolean isRoomAvailable = queryRoomAvailability(); // Call the method to query room availability
-        if (isRoomAvailable) {
-            System.out.println("The room is available.");
-        } else {
-            System.out.println("The room is not available.");
-        }
+        // Add your logic here to check room availability
+        System.out.println("Checking room availability...");
     }
 
-    // Method to query room availability
-    private boolean queryRoomAvailability() {
-        boolean isRoomAvailable = false;
+    private LocalDate queryDate(String type) {
+        LocalDate today = LocalDate.now();
+        LocalDate threeYearsFromNow = today.plusYears(3);
+        LocalDate date = null;
         boolean isValid = false;
         while (!isValid) {
-            System.out.println("Is the room available? ");
-            System.out.print("Enter 'yes' or 'no': ");
-
-            String input = scanner.nextLine().trim().toLowerCase(); // Trim the input to remove leading and trailing whitespace and convert to lowercase
-            if (input.equals("yes")) {
-                isRoomAvailable = true;
-                isValid = true; // Set isValid to true to exit the loop
-            } else if (input.equals("no")) {
-                isRoomAvailable = false;
-                isValid = true; // Set isValid to true to exit the loop
-            } else {
-                System.out.println("Invalid input. Please enter 'yes' or 'no'.");
+            System.out.println("Please enter your " + type + " date (dd/mm/yyyy): ");
+            String input = scanner.nextLine().trim();
+            try {
+                date = LocalDate.parse(input, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+                if ((date.isBefore(today)) || (date.isAfter(threeYearsFromNow))) {
+                    System.out.println(type.substring(0, 1).toUpperCase() + type.substring(1) + " date must be between today and three years from now. Please enter a valid date.");
+                } else {
+                    isValid = true;
+                }
+            } catch (DateTimeParseException e) {
+                System.out.println("Invalid date format. Please enter a valid date in the format dd/mm/yyyy.");
             }
         }
-        return isRoomAvailable;
+        return date;
     }
 }
