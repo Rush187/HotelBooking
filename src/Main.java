@@ -1,7 +1,9 @@
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         // Run the program here.
 
         // Start with the name of the guest booking the room.
@@ -16,12 +18,13 @@ public class Main {
         DurationOfStay newDurationOfStay = new DurationOfStay();
         int duration = newDurationOfStay.askForDurationOfStay(); // Call the method to ask for the duration of stay
 
-        // What type of room?
-        RoomType newRoomType = new RoomType();
-        newRoomType.askForRoomType(duration); // Call the method to ask for the room type with duration as argument
+// What type of room?
+        RoomType newRoomType = new RoomType(scanner, duration);
+        newRoomType.askForRoomType(); // Call the method to ask for the room type with duration as argument
+
 
         // Check room availability.
-        Calendar newCalendar = new Calendar(duration);
+        Calendar newCalendar = new Calendar(scanner, duration);
         newCalendar.checkRoomAvailability(); // Call the method to check room availability
 
         // Check in date?

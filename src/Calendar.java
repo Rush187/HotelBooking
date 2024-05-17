@@ -1,5 +1,4 @@
 import java.time.LocalDate;
-import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
@@ -7,10 +6,10 @@ import java.util.Scanner;
 public class Calendar {
     private final Scanner scanner;
     private LocalDate checkInDate;
-    private int duration;
+    private final int duration;
 
-    public Calendar(int duration) {
-        scanner = new Scanner(System.in);
+    public Calendar(Scanner scanner, int duration) {
+        this.scanner = scanner;
         this.duration = duration;
     }
 

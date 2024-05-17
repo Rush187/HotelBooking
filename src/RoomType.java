@@ -2,12 +2,14 @@ import java.util.Scanner;
 
 public class RoomType {
     private final Scanner scanner;
+    private final int duration;
 
-    public RoomType() {
-        scanner = new Scanner(System.in);
+    public RoomType(Scanner scanner, int duration) {
+        this.scanner = scanner;
+        this.duration = duration;
     }
 
-    public void askForRoomType(int duration) {
+    public void askForRoomType() {
         String[] roomDetails = queryRoomType(duration);
         System.out.println("The type of room booked is " + roomDetails[0] + " and the total cost is $" + roomDetails[1] + ".");
     }
